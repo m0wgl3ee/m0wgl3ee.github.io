@@ -1,0 +1,290 @@
+{
+  "profile": {
+    "name": "Napat Kongsawad",
+    "kicker": "Bangkok, Thailand",
+    "bio": "Multimedia journalist based in Bangkok, experienced in leading coverage for an international audience. Politics, business, and compelling stories.",
+    "email": "kongsawadnapat@gmail.com",
+    "links": [
+      {
+        "label": "Email",
+        "url": "mailto:kongsawadnapat@gmail.com"
+      },
+      {
+        "label": "Twitter / X",
+        "url": "https://twitter.com/maekkongsawad"
+      },
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/napatkongsawad/"
+      },
+      {
+        "label": "CV",
+        "url": "https://drive.google.com/file/d/1f7u0PfqHVrqXDZjj6fFY3Z6PO8oAgHis/view?usp=sharing"
+      }
+    ]
+  },
+  "sections": [
+    {
+      "id": "nhk",
+      "title": "NHK World",
+      "note": "Broadcast packages and reporting for NHK WORLD-JAPAN."
+    },
+    {
+      "id": "ap",
+      "title": "Associated Press",
+      "note": "Wire reporting from Bangkok for a global audience."
+    },
+    {
+      "id": "bloomberg",
+      "title": "Bloomberg",
+      "note": "Markets, commodities, and Southeast Asian politics."
+    },
+    {
+      "id": "freelance",
+      "title": "Freelance & Other Works",
+      "note": "Reporting for The Nation (Thailand)."
+    }
+  ],
+  "clips": [
+    {
+      "section": "nhk",
+      "pub": "NHK World",
+      "date": "2026-04-22",
+      "title": "Thai foreign minister visits Myanmar",
+      "url": "https://youtu.be/dNPlaRr_Afc",
+      "thumb": "img/yt-dNPlaRr_Afc.jpg"
+    },
+    {
+      "section": "nhk",
+      "pub": "NHK World",
+      "date": "2026-04-08",
+      "title": "Thailand's fans of washoku crave variety",
+      "url": "https://youtu.be/qf91_6XxsCY",
+      "thumb": "img/yt-qf91_6XxsCY.jpg"
+    },
+    {
+      "section": "nhk",
+      "pub": "NHK World",
+      "date": "2026-03-17",
+      "title": "Thailand's Death Fest event encourages end-of-life planning",
+      "url": "https://youtu.be/2Xg0GATx0yY",
+      "thumb": "img/yt-2Xg0GATx0yY.jpg"
+    },
+    {
+      "section": "nhk",
+      "pub": "NHK World",
+      "date": "2026-03-16",
+      "title": "20 Thai crew repatriated after cargo ship attacked near Strait of Hormuz",
+      "url": "https://youtu.be/3q9xRSpDcsA",
+      "thumb": "img/yt-3q9xRSpDcsA.jpg"
+    },
+    {
+      "section": "nhk",
+      "pub": "NHK World",
+      "date": "2026-02-06",
+      "title": "FM Sihasak hopeful for democracy in Myanmar after election",
+      "url": "https://youtu.be/8lRYHBlU9V4",
+      "thumb": "img/yt-8lRYHBlU9V4.jpg"
+    },
+    {
+      "section": "nhk",
+      "pub": "NHK World",
+      "date": "2025-12-13",
+      "title": "20 years on, Thai abductee's family still awaiting answers from North Korea",
+      "url": "https://youtu.be/P8J_0tGdlu0",
+      "thumb": "img/yt-P8J_0tGdlu0.jpg"
+    },
+    {
+      "section": "nhk",
+      "pub": "NHK World",
+      "date": "2025-10-17",
+      "title": "Thais anxious over Myanmar rare earths",
+      "url": "https://youtu.be/ZPH1W2LnNgM",
+      "thumb": "img/yt-ZPH1W2LnNgM.jpg"
+    },
+    {
+      "section": "nhk",
+      "pub": "NHK World",
+      "date": "2025-03-05",
+      "title": "International victims caught up in scam centers along Thai-Myanmar borderlands",
+      "url": "https://youtu.be/pkzuqUJz9MY",
+      "thumb": "img/yt-pkzuqUJz9MY.jpg"
+    },
+    {
+      "section": "nhk",
+      "pub": "NHK World",
+      "date": "2025-02-16",
+      "title": "Trump's foreign aid pause suspends removal of US-dropped bombs in Vietnam, Laos",
+      "file": "clips/nhk-us-bombs-laos-vietnam.pdf",
+      "thumb": "img/nhk-us-bombs-pdf.png"
+    },
+    {
+      "section": "nhk",
+      "pub": "NHK World",
+      "date_label": "Backstories",
+      "title": "Foreigners forced to work in Myanmar-based fraud rings",
+      "url": "https://www3.nhk.or.jp/nhkworld/en/news/backstories/3828/",
+      "thumb": "img/nhk-fraud-rings.jpg"
+    },
+    {
+      "section": "ap",
+      "pub": "AP News",
+      "date": "2024-09-04",
+      "title": "After the king's endorsement, Thailand has a new Cabinet but with some familiar faces",
+      "url": "https://apnews.com/article/thailand-cabinet-paetongtarn-shinawatra-pheu-thai-srettha-98b9915f7e3bbd32a3d6ceb90d47abb6",
+      "thumb": "img/ap-cabinet.jpg"
+    },
+    {
+      "section": "ap",
+      "pub": "AP News",
+      "date": "2024-08-15",
+      "title": "Thai courts that have disbanded multiple governments are accused of setting back democracy",
+      "url": "https://apnews.com/article/constitutional-court-thaksin-move-forward-electiosn-23a603247e7e28066a0e75828b86ddfc",
+      "thumb": "img/ap-courts.jpg"
+    },
+    {
+      "section": "ap",
+      "pub": "AP News",
+      "date": "2024-07-17",
+      "title": "Traces of cyanide are found in the blood of Vietnamese and Americans found dead in a Bangkok hotel",
+      "url": "https://apnews.com/article/thailand-hotel-death-poisoning-cyanide-795719445377c5be993a792aeba48586",
+      "thumb": "img/ap-cyanide.jpg"
+    },
+    {
+      "section": "ap",
+      "pub": "AP News",
+      "date": "2024-06-13",
+      "title": "Rights groups urge Thailand not to extradite Vietnamese activist, saying he's at risk if sent home",
+      "url": "https://apnews.com/article/thailand-vietnam-activist-extradition-human-rights-groups-68c763df59082a822194fb0473e32eb8",
+      "thumb": "img/ap-activist.jpg"
+    },
+    {
+      "section": "ap",
+      "pub": "AP News",
+      "date": "2024-05-23",
+      "title": "The Constitutional Court of Thailand agrees to hear a case that could imperil the prime minister",
+      "url": "https://apnews.com/article/srettha-constitutional-court-thailand-thaksin-cabinet-6d3c2ffa46ae4d378833370f36850a5c",
+      "thumb": "img/ap-court-srettha.jpg"
+    },
+    {
+      "section": "ap",
+      "pub": "AP News",
+      "date": "2024-05-22",
+      "title": "Most of passengers from battered Singapore Airlines jetliner arrive in Singapore from Bangkok",
+      "url": "https://apnews.com/article/singapore-airlines-turbulence-bangkok-london-thailand-a6aec916cf38cc82b122198a35b95fd8",
+      "thumb": "img/ap-sia-arrive.jpg"
+    },
+    {
+      "section": "ap",
+      "pub": "AP News",
+      "date": "2024-05-22",
+      "title": "'Sheer terror': Passengers describe turbulence-hit flight that put 20 in intensive care",
+      "url": "https://apnews.com/article/singapore-airlines-turbulence-bangkok-hospitalized-c3750c6b6f611acd771766b999d7468d",
+      "thumb": "img/ap-sia-terror.png"
+    },
+    {
+      "section": "ap",
+      "pub": "AP News",
+      "date": "2024-05-14",
+      "title": "A monarchy reform activist in Thailand dies in detention after a monthslong hunger strike",
+      "url": "https://apnews.com/article/thailand-monarchy-hunger-strike-netiporn-abdf2345afeba998fec1637c5bca3d12",
+      "thumb": "img/ap-hunger-strike.png"
+    },
+    {
+      "section": "bloomberg",
+      "pub": "Bloomberg",
+      "date": "2023-07-26",
+      "title": "Rice surges to three-year high as Indian export ban roils market",
+      "url": "https://www.bloomberg.com/news/articles/2023-07-26/rice-surges-to-three-year-high-as-indian-export-ban-roils-market",
+      "no_thumb": true
+    },
+    {
+      "section": "bloomberg",
+      "pub": "Bloomberg",
+      "date": "2023-07-14",
+      "title": "Cambodian PM walks back on Pita defeat post after Twitter storm",
+      "url": "https://www.bloomberg.com/news/articles/2023-07-14/cambodian-pm-walks-back-on-pita-defeat-post-after-twitter-storm",
+      "no_thumb": true
+    },
+    {
+      "section": "bloomberg",
+      "pub": "Bloomberg",
+      "date": "2023-07-03",
+      "title": "Global supplies of sugar, rice at risk from looming Thai drought",
+      "url": "https://www.bloomberg.com/news/articles/2023-07-03/drought-menacing-thailand-threatens-global-supply-of-sugar-rice",
+      "no_thumb": true
+    },
+    {
+      "section": "bloomberg",
+      "pub": "Bloomberg",
+      "date": "2023-07-03",
+      "title": "Thai coalition settles Speaker row as prime minister vote looms",
+      "url": "https://www.bloomberg.com/news/articles/2023-07-03/thai-parliament-convenes-after-election-to-kick-off-pm-selection",
+      "no_thumb": true
+    },
+    {
+      "section": "bloomberg",
+      "pub": "Bloomberg",
+      "date": "2023-06-05",
+      "title": "Dry weather to slash Australia's next wheat crop by a third",
+      "url": "https://www.bloomberg.com/news/articles/2023-06-05/dry-weather-set-to-slash-australia-s-next-wheat-crop-by-a-third",
+      "no_thumb": true
+    },
+    {
+      "section": "freelance",
+      "pub": "The Nation",
+      "date": "2024-03-20",
+      "title": "Increase in northern Thai ship traffic to China is coming: Official",
+      "url": "https://www.nationthailand.com/business/trading-investment/40036552",
+      "thumb": "img/nation-ships.webp"
+    },
+    {
+      "section": "freelance",
+      "pub": "The Nation",
+      "date": "2024-03-20",
+      "title": "Binance CEO sees Bitcoin soaring to $80,000 this year",
+      "url": "https://www.nationthailand.com/business/digital-assets/40036553",
+      "thumb": "img/nation-binance.webp"
+    },
+    {
+      "section": "freelance",
+      "pub": "The Nation",
+      "date": "2024-02-18",
+      "title": "Thaksin's homecoming: Parole debate and political fallout",
+      "url": "https://www.nationthailand.com/thailand/politics/40035678",
+      "thumb": "img/nation-thaksin.webp"
+    },
+    {
+      "section": "freelance",
+      "pub": "The Nation",
+      "date": "2024-02-16",
+      "title": "Land bridge project gets the nod from Parliament despite concerns",
+      "url": "https://www.nationthailand.com/thailand/policies/40035629",
+      "thumb": "img/nation-landbridge.webp"
+    },
+    {
+      "section": "freelance",
+      "pub": "The Nation",
+      "date": "2024-02-07",
+      "title": "Thailand not in a big enough crisis to warrant huge loan for handout: NACC",
+      "url": "https://www.nationthailand.com/thailand/policies/40035371",
+      "thumb": "img/nation-nacc.webp"
+    },
+    {
+      "section": "freelance",
+      "pub": "The Nation",
+      "date": "2024-01-29",
+      "title": "Phang Nga airport feasibility study back on track in bid to boost tourism in South",
+      "url": "https://www.nationthailand.com/thailand/tourism/40035118",
+      "thumb": "img/nation-phangnga.webp"
+    },
+    {
+      "section": "freelance",
+      "pub": "The Nation",
+      "date": "2024-01-18",
+      "title": "Lawmakers accept unanimously all 7 drafts of Clean Air Bill",
+      "url": "https://www.nationthailand.com/thailand/general/40034803",
+      "thumb": "img/nation-cleanair.webp"
+    }
+  ]
+}

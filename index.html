@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Napat Kongsawad — multimedia journalist based in Bangkok, Thailand. Politics, business, and compelling stories for NHK World, AP, Bloomberg and more.">
+<title>Napat Kongsawad — Journalist</title>
+<style>
+  :root {
+    --bg: #0b0f16;           /* blue-black */
+    --card: #141b28;
+    --card-hover: #18202f;
+    --ink: #f2f4f8;
+    --ink-soft: #94a1b6;
+    --accent: #4d8dff;       /* readable cobalt on dark */
+    --accent-deep: #1e4fd8;  /* cobalt fill */
+    --accent-soft: rgba(77, 141, 255, 0.14);
+    --rule: #222c3e;
+    --serif: "Georgia", "Times New Roman", "TH Sarabun New", serif;
+    --sans: "Segoe UI", -apple-system, "Helvetica Neue", Arial, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--sans);
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.6;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 1.25rem; }
+
+  /* ---------- Header ---------- */
+  header {
+    padding: 4.5rem 0 3rem;
+    border-bottom: 1px solid var(--rule);
+    background:
+      radial-gradient(ellipse 60% 80% at 85% 10%, rgba(30, 79, 216, 0.22), transparent),
+      radial-gradient(ellipse 40% 60% at 10% 90%, rgba(77, 141, 255, 0.08), transparent);
+  }
+  .kicker {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.75rem;
+    color: var(--accent);
+    font-weight: 600;
+  }
+  h1 {
+    font-family: var(--serif);
+    font-size: clamp(2.4rem, 6vw, 3.8rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 0.4rem 0 1rem;
+  }
+  .bio {
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    color: var(--ink-soft);
+    max-width: 34em;
+  }
+  .links {
+    margin-top: 1.6rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+  .links a {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--ink);
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    padding: 0.35rem 0.95rem;
+    transition: border-color 0.15s, color 0.15s, background 0.15s;
+  }
+  .links a:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: var(--accent-soft);
+  }
+
+  /* ---------- Section nav ---------- */
+  nav {
+    position: sticky;
+    top: 0;
+    background: rgba(11, 15, 22, 0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--rule);
+    z-index: 10;
+  }
+  nav .wrap {
+    display: flex;
+    gap: 1.4rem;
+    overflow-x: auto;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+  nav a {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink-soft);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  nav a:hover { color: var(--accent); }
+
+  /* ---------- Sections ---------- */
+  section { padding: 3.2rem 0 1rem; }
+  h2 {
+    font-family: var(--serif);
+    font-size: 1.8rem;
+    margin-bottom: 0.35rem;
+  }
+  .section-note {
+    color: var(--ink-soft);
+    font-size: 0.92rem;
+    margin-bottom: 1.6rem;
+  }
+  h2::after {
+    content: "";
+    display: block;
+    width: 3rem;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-deep));
+    margin-top: 0.5rem;
+    border-radius: 2px;
+  }
+
+  /* ---------- Card grid ---------- */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.2rem;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+    color: var(--ink);
+    transition: transform 0.18s, border-color 0.18s, background 0.18s;
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent);
+    background: var(--card-hover);
+  }
+  .thumb {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    background: var(--rule);
+    overflow: hidden;
+  }
+  .thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .card:hover .thumb img { filter: saturate(1.1) brightness(1.05); }
+
+  /* placeholder thumbs for clips with no image */
+  .thumb.ph {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+      radial-gradient(ellipse 120% 100% at 0% 0%, rgba(30, 79, 216, 0.55), transparent 65%),
+      linear-gradient(145deg, #16233f 0%, #0d1420 100%);
+  }
+  .thumb.ph span {
+    font-family: var(--serif);
+    font-size: 3rem;
+    font-weight: 700;
+    color: rgba(77, 141, 255, 0.85);
+    letter-spacing: 0.02em;
+  }
+  .thumb.ph span.badge { font-family: var(--sans); font-size: 0.66rem; }
+
+  /* play / format badge */
+  .badge {
+    position: absolute;
+    left: 0.6rem;
+    bottom: 0.6rem;
+    font-size: 0.66rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: #fff;
+    background: var(--accent-deep);
+    border-radius: 4px;
+    padding: 0.15rem 0.5rem;
+  }
+
+  .card-body { padding: 0.9rem 1rem 1.05rem; }
+  .card-body h3 {
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+  .card:hover .card-body h3 { color: var(--accent); }
+  .card-body .meta {
+    margin-top: 0.45rem;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--ink-soft);
+  }
+  .card-body .meta .pub { color: var(--accent); font-weight: 700; }
+
+  /* ---------- Footer ---------- */
+  footer {
+    margin-top: 3.5rem;
+    border-top: 1px solid var(--rule);
+    padding: 2rem 0 3rem;
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <p class="kicker">Bangkok, Thailand</p>
+    <h1>Napat Kongsawad</h1>
+    <p class="bio">Multimedia journalist based in Bangkok, experienced in leading coverage for an international audience. Politics, business, and compelling stories.</p>
+    <div class="links">
+      <a href="mailto:kongsawadnapat@gmail.com">Email</a>
+      <a href="https://twitter.com/maekkongsawad" target="_blank" rel="noopener">Twitter / X</a>
+      <a href="https://www.linkedin.com/in/napatkongsawad/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://drive.google.com/file/d/1f7u0PfqHVrqXDZjj6fFY3Z6PO8oAgHis/view?usp=sharing" target="_blank" rel="noopener">CV</a>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="wrap">
+    <a href="#nhk">NHK World</a>
+    <a href="#ap">Associated Press</a>
+    <a href="#bloomberg">Bloomberg</a>
+    <a href="#freelance">Freelance &amp; Other Works</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <section id="nhk">
+    <h2>NHK World</h2>
+    <p class="section-note">Broadcast packages and reporting for NHK WORLD-JAPAN.</p>
+    <div class="grid">
+      <a class="card" href="https://youtu.be/dNPlaRr_Afc" target="_blank" rel="noopener">
+        <div class="thumb"><img src="img/yt-dNPlaRr_Afc.jpg" alt="" loading="lazy"><span class="badge">▶ VIDEO</span></div>
+        <div class="card-body">
+          <h3>Thai foreign minister visits Myanmar</h3>
+          <p class="meta"><span class="pub">NHK World</span> · Apr 22, 2026</p>
+        </div>
+      </a>
+      <a class="card" href="https://youtu.be/qf91_6XxsCY" target="_blank" rel="noopener">
+        <div class="thumb"><img src="img/yt-qf91_6XxsCY.jpg" alt="" loading="lazy"><span class="badge">▶ VIDEO</span></div>
+        <div class="card-body">
+          <h3>Thailand&#x27;s fans of washoku crave variety</h3>
+          <p class="meta"><span class="pub">NHK World</span> · Apr 8, 2026</p>
+        </div>
+      </a>
+      <a class="card" href="https://youtu.be/2Xg0GATx0yY" target="_blank" rel="noopener">
+        <div class="thumb"><img src="img/yt-2Xg0GATx0yY.jpg" alt="" loading="lazy"><span class="badge">▶ VIDEO</span></div>
+        <div class="card-body">
+          <h3>Thailand&#x27;s Death Fest event encourages end-of-life planning</h3>
+          <p class="meta"><span class="pub">NHK World</span> · Mar 17, 2026</p>
+        </div>
+      </a>
+      <a class="card" href="https://youtu.be/3q9xRSpDcsA" target="_blank" rel="noopener">
+        <div class="thumb"><img src="img/yt-3q9xRSpDcsA.jpg" alt="" loading="lazy"><span class="badge">▶ VIDEO</span></div>
+        <div class="card-body">
+          <h3>20 Thai crew repatriated after cargo ship attacked near Strait of Hormuz</h3>
+          <p class="meta"><span class="pub">NHK World</span> · Mar 16, 2026</p>
+        </div>
+      </a>
+      <a class="card" href="https://youtu.be/8lRYHBlU9V4" target="_blank" rel="noopener">
+        <div class="thumb"><img src="img/yt-8lRYHBlU9V4.jpg" alt="" loading="lazy"><span class="badge">▶ VIDEO</span></div>
+        <div class="card-body">
+          <h3>FM Sihasak hopeful for democracy in Myanmar after election</h3>
+          <p class="meta"><span class="pub">NHK World</span> · Feb 6, 2026</p>
+        </div>
+      </a>
+      <a class="card" href="https://youtu.be/P8J_0tGdlu0" target="_blank" rel="noopener">
+        <div class="thumb"><img src="img/yt-P8J_0tGdlu0.jpg" alt="" loading="lazy"><span class="badge">▶ VIDEO</span></div>
+        <div class="card-body">
+          <h3>20 years on, Thai abductee&#x27;s family still awaiting answers from North Korea</h3>
+          <p class="meta"><span class="pub">NHK World</span> · Dec 13, 2025</p>
+        </div>
+      </a>
+      <a class="card" href="https://youtu.be/ZPH1W2LnNgM" target="_blank" rel="noopener">
+        <div class="thumb"><img src="img/yt-ZPH1W2LnNgM.jpg" alt="" loading="lazy"><span class="badge">▶ VIDEO</span></div>
+        <div class="card-body">
+          <h3>Thais anxious over Myanmar rare earths</h3>
+          <p class="meta"><span class="pub">NHK World</span> · Oct 17, 2025</p>
+        </div>
+      </a>
+      <a class="card" href="https://youtu.be/pkzuqUJz9MY" target="_blank" rel="noopener">
+        <div class="thumb"><img src="img/yt-pkzuqUJz9MY.jpg" alt="" loading="lazy"><span class="badge">▶ VIDEO</span></div>
+        <div class="card-body">
+          <h3>International victims caught up in scam centers along Thai-Myanmar borderlands</h3>
+          <p class="meta"><span class="pub">NHK World</span> · Mar 5, 2025</p>
+        </div>
+      </a>
+      <a class="card" href="clips/nhk-us-bombs-laos-vietnam.pdf" target="_blank" rel="noopener">
+        <div class="thumb"><img src="img/nhk-us-bombs-pdf.png" alt="" loading="lazy"><span class="badge">PDF</span></div>
+        <div class="card-body">
+          <h3>Trump&#x27;s foreign aid pause suspends removal of US-dropped bombs in Vietnam, Laos</h3>
+          <p class="meta"><span class="pub">NHK World</span> · Feb 16, 2025</p>
+        </div>
+      </a>
+      <a class="card" href="https://www3.nhk.or.jp/nhkworld/en/news/backstories/3828/" target="_blank" rel="noopener">
+        <div class="thumb"><img src="img/nhk-fraud-rings.jpg" alt="" loading="lazy"></div>
+        <div class="card-body">
+          <h3>Foreigners forced to work in Myanmar-based fraud rings</h3>
+          <p class="meta"><span class="pub">NHK World</span> · Backstories</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section id="ap">
+    <h2>Associated Press</h2>
+    <p class="section-note">Wire reporting from Bangkok for a global audience.</p>
+    <div class="grid">
+      <a class="card" href="https://apnews.com/article/thailand-cabinet-paetongtarn-shinawatra-pheu-thai-srettha-98b9915f7e3bbd32a3d6ceb90d47abb6" target="_blank" rel="noopener">
+        <div class="thumb"><img src="img/ap-cabinet.jpg" alt="" loading="lazy"></div>
+        <div class="card-body">
+          <h3>After the king&#x27;s endorsement, Thailand has a new Cabinet but with some familiar faces</h3>
+          <p class="meta"><span class="pub">AP News</span> · Sep 4, 2024</p>
+        </div>
+      </a>
+      <a class="card" href="https://apnews.com/article/constitutional-court-thaksin-move-forward-electiosn-23a603247e7e28066a0e75828b86ddfc" target="_blank" rel="noopener">
+        <div class="thumb"><img src="img/ap-courts.jpg" alt="" loading="lazy"></div>
+        <div class="card-body">
+          <h3>Thai courts that have disbanded multiple governments are accused of setting back democracy</h3>
+          <p class="meta"><span class="pub">AP News</span> · Aug 15, 2024</p>
+        </div>
+      </a>
+      <a class="card" href="https://apnews.com/article/thailand-hotel-death-poisoning-cyanide-795719445377c5be993a792aeba48586" target="_blank" rel="noopener">
+        <div class="thumb"><img src="img/ap-cyanide.jpg" alt="" loading="lazy"></div>
+        <div class="card-body">
+          <h3>Traces of cyanide are found in the blood of Vietnamese and Americans found dead in a Bangkok hotel</h3>
+          <p class="meta"><span class="pub">AP News</span> · Jul 17, 2024</p>
+        </div>
+      </a>
+      <a class="card" href="https://apnews.com/article/thailand-vietnam-activist-extradition-human-rights-groups-68c763df59082a822194fb0473e32eb8" target="_blank" rel="noopener">
+        <div class="thumb"><img src="img/ap-activist.jpg" alt="" loading="lazy"></div>
+        <div class="card-body">
+          <h3>Rights groups urge Thailand not to extradite Vietnamese activist, saying he&#x27;s at risk if sent home</h3>
+          <p class="meta"><span class="pub">AP News</span> · Jun 13, 2024</p>
+        </div>
+      </a>
+      <a class="card" href="https://apnews.com/article/srettha-constitutional-court-thailand-thaksin-cabinet-6d3c2ffa46ae4d378833370f36850a5c" target="_blank" rel="noopener">
+        <div class="thumb"><img src="img/ap-court-srettha.jpg" alt="" loading="lazy"></div>
+        <div class="card-body">
+          <h3>The Constitutional Court of Thailand agrees to hear a case that could imperil the prime minister</h3>
+          <p class="meta"><span class="pub">AP News</span> · May 23, 2024</p>
+        </div>
+      </a>
+      <a class="card" href="https://apnews.com/article/singapore-airlines-turbulence-bangkok-london-thailand-a6aec916cf38cc82b122198a35b95fd8" target="_blank" rel="noopener">
+        <div class="thumb"><img src="img/ap-sia-arrive.jpg" alt="" loading="lazy"></div>
+        <div class="card-body">
+          <h3>Most of passengers from battered Singapore Airlines jetliner arrive in Singapore from Bangkok</h3>
+          <p class="meta"><span class="pub">AP News</span> · May 22, 2024</p>
+        </div>
+      </a>
+      <a class="card" href="https://apnews.com/article/singapore-airlines-turbulence-bangkok-hospitalized-c3750c6b6f611acd771766b999d7468d" target="_blank" rel="noopener">
+        <div class="thumb"><img src="img/ap-sia-terror.png" alt="" loading="lazy"></div>
+        <div class="card-body">
+          <h3>&#x27;Sheer terror&#x27;: Passengers describe turbulence-hit flight that put 20 in intensive care</h3>
+          <p class="meta"><span class="pub">AP News</span> · May 22, 2024</p>
+        </div>
+      </a>
+      <a class="card" href="https://apnews.com/article/thailand-monarchy-hunger-strike-netiporn-abdf2345afeba998fec1637c5bca3d12" target="_blank" rel="noopener">
+        <div class="thumb"><img src="img/ap-hunger-strike.png" alt="" loading="lazy"></div>
+        <div class="card-body">
+          <h3>A monarchy reform activist in Thailand dies in detention after a monthslong hunger strike</h3>
+          <p class="meta"><span class="pub">AP News</span> · May 14, 2024</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section id="bloomberg">
+    <h2>Bloomberg</h2>
+    <p class="section-note">Markets, commodities, and Southeast Asian politics.</p>
+    <div class="grid">
+      <a class="card" href="https://www.bloomberg.com/news/articles/2023-07-26/rice-surges-to-three-year-high-as-indian-export-ban-roils-market" target="_blank" rel="noopener">
+        <div class="thumb ph"><span>Bloomberg</span></div>
+        <div class="card-body">
+          <h3>Rice surges to three-year high as Indian export ban roils market</h3>
+          <p class="meta"><span class="pub">Bloomberg</span> · Jul 26, 2023</p>
+        </div>
+      </a>
+      <a class="card" href="https://www.bloomberg.com/news/articles/2023-07-14/cambodian-pm-walks-back-on-pita-defeat-post-after-twitter-storm" target="_blank" rel="noopener">
+        <div class="thumb ph"><span>Bloomberg</span></div>
+        <div class="card-body">
+          <h3>Cambodian PM walks back on Pita defeat post after Twitter storm</h3>
+          <p class="meta"><span class="pub">Bloomberg</span> · Jul 14, 2023</p>
+        </div>
+      </a>
+      <a class="card" href="https://www.bloomberg.com/news/articles/2023-07-03/drought-menacing-thailand-threatens-global-supply-of-sugar-rice" target="_blank" rel="noopener">
+        <div class="thumb ph"><span>Bloomberg</span></div>
+        <div class="card-body">
+          <h3>Global supplies of sugar, rice at risk from looming Thai drought</h3>
+          <p class="meta"><span class="pub">Bloomberg</span> · Jul 3, 2023</p>
+        </div>
+      </a>
+      <a class="card" href="https://www.bloomberg.com/news/articles/2023-07-03/thai-parliament-convenes-after-election-to-kick-off-pm-selection" target="_blank" rel="noopener">
+        <div class="thumb ph"><span>Bloomberg</span></div>
+        <div class="card-body">
+          <h3>Thai coalition settles Speaker row as prime minister vote looms</h3>
+          <p class="meta"><span class="pub">Bloomberg</span> · Jul 3, 2023</p>
+        </div>
+      </a>
+      <a class="card" href="https://www.bloomberg.com/news/articles/2023-06-05/dry-weather-set-to-slash-australia-s-next-wheat-crop-by-a-third" target="_blank" rel="noopener">
+        <div class="thumb ph"><span>Bloomberg</span></div>
+        <div class="card-body">
+          <h3>Dry weather to slash Australia&#x27;s next wheat crop by a third</h3>
+          <p class="meta"><span class="pub">Bloomberg</span> · Jun 5, 2023</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section id="freelance">
+    <h2>Freelance &amp; Other Works</h2>
+    <p class="section-note">Reporting for The Nation (Thailand).</p>
+    <div class="grid">
+      <a class="card" href="https://www.nationthailand.com/business/trading-investment/40036552" target="_blank" rel="noopener">
+        <div class="thumb"><img src="img/nation-ships.webp" alt="" loading="lazy"></div>
+        <div class="card-body">
+          <h3>Increase in northern Thai ship traffic to China is coming: Official</h3>
+          <p class="meta"><span class="pub">The Nation</span> · Mar 20, 2024</p>
+        </div>
+      </a>
+      <a class="card" href="https://www.nationthailand.com/business/digital-assets/40036553" target="_blank" rel="noopener">
+        <div class="thumb"><img src="img/nation-binance.webp" alt="" loading="lazy"></div>
+        <div class="card-body">
+          <h3>Binance CEO sees Bitcoin soaring to $80,000 this year</h3>
+          <p class="meta"><span class="pub">The Nation</span> · Mar 20, 2024</p>
+        </div>
+      </a>
+      <a class="card" href="https://www.nationthailand.com/thailand/politics/40035678" target="_blank" rel="noopener">
+        <div class="thumb"><img src="img/nation-thaksin.webp" alt="" loading="lazy"></div>
+        <div class="card-body">
+          <h3>Thaksin&#x27;s homecoming: Parole debate and political fallout</h3>
+          <p class="meta"><span class="pub">The Nation</span> · Feb 18, 2024</p>
+        </div>
+      </a>
+      <a class="card" href="https://www.nationthailand.com/thailand/policies/40035629" target="_blank" rel="noopener">
+        <div class="thumb"><img src="img/nation-landbridge.webp" alt="" loading="lazy"></div>
+        <div class="card-body">
+          <h3>Land bridge project gets the nod from Parliament despite concerns</h3>
+          <p class="meta"><span class="pub">The Nation</span> · Feb 16, 2024</p>
+        </div>
+      </a>
+      <a class="card" href="https://www.nationthailand.com/thailand/policies/40035371" target="_blank" rel="noopener">
+        <div class="thumb"><img src="img/nation-nacc.webp" alt="" loading="lazy"></div>
+        <div class="card-body">
+          <h3>Thailand not in a big enough crisis to warrant huge loan for handout: NACC</h3>
+          <p class="meta"><span class="pub">The Nation</span> · Feb 7, 2024</p>
+        </div>
+      </a>
+      <a class="card" href="https://www.nationthailand.com/thailand/tourism/40035118" target="_blank" rel="noopener">
+        <div class="thumb"><img src="img/nation-phangnga.webp" alt="" loading="lazy"></div>
+        <div class="card-body">
+          <h3>Phang Nga airport feasibility study back on track in bid to boost tourism in South</h3>
+          <p class="meta"><span class="pub">The Nation</span> · Jan 29, 2024</p>
+        </div>
+      </a>
+      <a class="card" href="https://www.nationthailand.com/thailand/general/40034803" target="_blank" rel="noopener">
+        <div class="thumb"><img src="img/nation-cleanair.webp" alt="" loading="lazy"></div>
+        <div class="card-body">
+          <h3>Lawmakers accept unanimously all 7 drafts of Clean Air Bill</h3>
+          <p class="meta"><span class="pub">The Nation</span> · Jan 18, 2024</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 Napat Kongsawad · <a href="mailto:kongsawadnapat@gmail.com">kongsawadnapat@gmail.com</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
