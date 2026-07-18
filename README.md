@@ -12,9 +12,13 @@ Static portfolio site, generated from `clips.json` by `build.py`.
      "pub": "NHK World",                    // label shown on the card
      "date": "2026-07-18",                  // ISO date (or "date_label": "Backstories")
      "title": "Headline exactly as published",
-     "url": "https://youtu.be/XXXXXXXXXXX"  // article or video URL
+     "url": "https://youtu.be/XXXXXXXXXXX", // article or video URL
+     "topic": "scams",                      // or "topics": ["breaking","scams"]
+     "summary": "1-2 sentences shown on hover"
    }
    ```
+
+   Topic ids are defined in the "topics" list in clips.json.
 
    For a PDF clipping: drop the file into `clips/` and use
    `"file": "clips/my-story.pdf"` instead of `"url"`.
